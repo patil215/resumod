@@ -2,7 +2,7 @@ This is an extremely simple, lightweight resume custom resume template. Its main
 
 ## Motivation
 
-I created this to tackle a problem I had this year. For certain types of jobs, I wanted to submit slightly different resume variations - for example, when applying to a security job I wanted to put security experience, but for an aerospace job I wanted to mention a certain personal project. My only options were either to a) create separate copies of each resume with slight changes (multiplying the amount of work to keep all of them up to date), or b) Remember to comment and uncomment certain lines in LaTeX (which is tedious and error prone). I wanted to create something that would let me change a single variable and have the resume "rewrite itself." Moreover, most of the resume templates I found online were bloated and overly complex.
+I created this to tackle a problem I had this year. For certain types of jobs, I wanted to submit slightly different resume variations - for example, when applying to a security job I wanted to put security experience, but for an aerospace job I wanted to mention a certain personal project. My only options were either to a) create separate copies of each resume with slight changes (multiplying the amount of work to keep all of them up to date), or b) remember to comment and uncomment certain lines in LaTeX (which is tedious and error prone). I wanted to create something that would let me change a single variable and have the resume "rewrite itself." Moreover, most of the resume templates I found online were bloated and overly complex.
 
 ## Usage
 
