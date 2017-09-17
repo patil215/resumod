@@ -1,0 +1,160 @@
+\usepackage{pgffor}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{xcolor,soul,lipsum}
+\usepackage{ebgaramond}
+\usepackage{environ}
+\usepackage{background}
+\hyphenpenalty=10000
+\pagenumbering{gobble}
+\fontdimen2\font=4pt
+
+% ==============================================================
+% UTILITY MACROS
+% ==============================================================
+
+\setlength\parindent{0pt}
+\setlist[itemize]{itemsep=-2pt, topsep=2pt}
+
+\newcommand{\headerlessSection}[1]{
+  \par\refstepcounter{section}
+  \sectionmark{#1}
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}
+}
+
+\makeatletter
+\def\g@addto@macroname@exp#1#2{%
+  \expandafter\g@addto@macro\csname#1\expandafter\endcsname\expandafter{#2}}
+
+\NewEnviron{rgrp}[2][]{%
+  \if!#1!\def\rgrp@key{#2}\else\def\rgrp@key{#1}\fi
+  \global\@namedef{thergrp@\rgrp@key}{\headerlessSection{#2}}
+  \g@addto@macroname@exp{thergrp@\rgrp@key}{\BODY}%
+}
+
+\newcommand{\rsec}[1]{\@nameuse{thergrp@#1}}
+\makeatother
+
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{38}{40}} 
+\makeatother
+
+% ==============================================================
+% RESUME MACROS
+% ==============================================================
+
+\def\idtag #1{
+\SetBgContents{Neil Patil (Version: #1)}
+\SetBgScale{0.75}
+\SetBgAngle{0}
+\SetBgOpacity{1}
+\SetBgColor{black}
+\SetBgPosition{current page.south west}
+\SetBgHshift{4cm}
+\SetBgVshift{1.5cm}
+}
+
+\def\rheader {
+\begin{minipage}[b]{0.33333\textwidth}
+\raggedright
+{\HUGE Neil Patil}
+\end{minipage}%
+\begin{minipage}[b]{0.33333\textwidth}
+\centering
+\href{mailto:neilpatil215@gmail.com}{neilpatil$215$@gmail.com} \par
+$512$-$573$-$1063$
+\end{minipage}%
+\begin{minipage}[b]{0.33333\textwidth}
+\raggedleft
+\href{https://github.com/patil215}{github.com/patil$215$} \par
+\href{https://linkedin.com/in/patil215}{linkedin.com/in/patil$215$}
+\end{minipage}
+\vspace{8px}
+}
+
+\def\rtitle #1{
+	\vspace{14pt}
+	\textbf{\uppercase{#1}}
+	\vspace{4pt}
+}
+
+\def\rinterests #1{
+	\vspace{12pt}
+	{\large \textbf{\uppercase{Interests:}}} #1
+}
+
+\def\redu #1#2#3#4#5{
+	{\large \textbf{#1}
+	\hfill
+	\textbf{#2}}
+	\vspace{2pt}
+	\newline
+	#3
+	\hfill
+	#4
+	\vspace{2pt}
+	\newline
+	{\large \textbf{Coursework:} #5}
+	\vspace{4pt}
+}
+
+\def \rskills #1#2#3{
+	\textbf{Proficient:} #1
+	\hfill
+	\textbf{Familiar:} #2
+	\hfill
+	\newline
+	\textbf{Working Knowledge:} #3
+}
+
+\def\rextrainfo[#1]#2#3{
+	{\large 
+	\textbf{#2}
+	\hfill
+	\textbf{#3}
+	}
+	\begin{itemize}
+	\foreach \x in {#1}{
+		\item \x
+	}
+	\end{itemize}
+	\vspace{2pt}
+}
+
+\def\rextra #1#2{
+	{\large 
+	\textbf{#1}
+	\hfill
+	#2
+	}
+	\newline
+}
+
+\def\rexp[#1]#2#3{
+	{\large 
+	\textbf{#2}
+	\hfill
+	\textbf{#3}
+	}
+	\begin{itemize}
+	\foreach \x in {#1}{
+		\item \x
+	}
+	\end{itemize}
+	\vspace{2pt}
+}
+
+\def\rproj[#1]#2#3#4#5{
+	{\large
+	\textbf{#2 \href{#5}{\underline{\smash{#4}}}
+	\hfill
+	\textbf{#3}}
+	}
+	\begin{itemize}
+	\foreach \x in {#1}{
+		\item \x
+	}
+	\end{itemize}
+}
