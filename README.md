@@ -30,6 +30,6 @@ For example, let's say in the simplest case I want to have two versions of my re
 \fi
 ```
 
-Now, by setting resumeAtrue and resumeBfalse or vice versa, I can really quickly change the order in the version rendered.
+Now, by setting ``resumeAtrue`` and ``resumeBfalse`` or vice versa, I can really quickly change the order in the version rendered.
 
-Of course, this can be extended to be much more complex. See the example resume (example.tex) for more details.
+Of course, this can be extended to be much more complex. See the example resume (``example.tex``) for more details.
