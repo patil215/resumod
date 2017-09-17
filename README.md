@@ -1,4 +1,4 @@
-This is an extremely simple, lightweight resume custom resume template. Its main feature is that it allows you to modularly define items in your resume, and then dynamically reorder or only include certain ones based on a config variable - letting you easily create resumes of the same resume.
+This is an extremely simple, lightweight resume custom resume template. Its main feature is that it allows you to modularly define items in your resume, and then dynamically reorder or only include certain ones based on a config variable - letting you easily create arbitrary variations of the same resume.
 
 ## Motivation
 
