@@ -1,0 +1,156 @@
+\documentclass[11pt,letterpaper]{article}
+
+\input{template.tex}
+
+\begin{document}
+
+\DeclareFontShape{OT1}{EBGaramond-OsF}{bx}{n}{ <-> ssub * cmr/bx/n }{}
+
+\def\rheader {
+\begin{minipage}[b]{0.33333\textwidth}
+\raggedright
+{\HUGE John Doe}
+\end{minipage}%
+\begin{minipage}[b]{0.33333\textwidth}
+\centering
+\href{mailto:johndoe@example.com}{johndoe@example.com} \par
+$512$-$582$-$921$
+\end{minipage}%
+\begin{minipage}[b]{0.33333\textwidth}
+\raggedleft
+\href{https://github.com/example}{github.com/example} \par
+\href{https://linkedin.com/example}{linkedin.com/example} \par
+\end{minipage}
+\vspace{8px}
+}
+
+% ==============================================================
+% WORK EXPERIENCES
+% ==============================================================
+
+\begin{rgrp}{Exp Generic}
+\rexp[
+	{Worked on a distributed system for IOT VR devices},
+	{Built a scalable REST API to serve users},
+	{Worked on the mobile revolution}
+]
+{Software Developer - Company, Inc}
+{Summer 2017}
+\end{rgrp}
+
+% ==============================================================
+% PROJECTS
+% ==============================================================
+
+\begin{rgrp}{Proj JsJS}
+\rproj[
+	{Created yet another Javascript framework that provides no real improvement but makes you rewrite your application},
+	{The framework scales }
+]
+{JsJS}
+{Jan 2016 - April 2016}
+{(useless.com)}
+{https://useless.com}
+\end{rgrp}
+
+% ==============================================================
+% EDUCATION
+% ==============================================================
+\begin{rgrp}{Education Uni}
+\redu
+{Pursing B.S. in Geology - Generic University}
+{2016 - 2020}
+{Generic Honors Program}
+{GPA: $3.87$}
+{Underwater Basket Weaving, English, Math, Communications}
+\end{rgrp}
+
+% ==============================================================
+% SKILLS
+% ==============================================================
+\begin{rgrp}{Skills I}
+\rskills
+{A, B, C}
+{D, E, F}
+{H, I, J, K}
+\end{rgrp}
+
+% ==============================================================
+% INTERESTS
+% ==============================================================
+\begin{rgrp}{Interests A}
+\rinterests
+{Writing Resumes, Creating pointless Javascript frameworks}
+\end{rgrp}
+
+% ==============================================================
+% EXTRACURRICULARS
+% ==============================================================
+\begin{rgrp}{Extra Generic}
+	\rextrainfo[
+		{Do generic club activities}
+	]
+	{Generic Clubs}
+	{April 2017 - Present}
+\end{rgrp}
+
+
+% ==============================================================
+% DEFINE RESUME TYPES
+% ==============================================================
+
+\newif\ifa
+\newif\ifb
+
+
+% ==============================================================
+% PICK RESUME HERE
+% ==============================================================
+
+\atrue
+\bfalse
+
+\ifa
+	\rheader
+	
+	\rtitle{Education}
+	\rsec{Education Uni}
+	
+	\rtitle{Experience}
+	\rsec{Exp Generic}
+	
+	\rtitle{Projects}
+	\rsec{Proj JsJS}
+	
+	\rsec{Interests A}
+	
+	\rtitle{Skills}
+	\rsec{Skills I}
+	
+	\rtitle{Extracurriculars}
+	\rsec{Extra Generic}
+\fi
+
+\ifb
+	\rheader
+	
+	\rtitle{Education}
+	\rsec{Education Uni}
+	
+	\rtitle{Projects}
+	\rsec{Proj JsJS}
+	
+	\rsec{Interests A}
+	
+	\rtitle{Extracurriculars}
+	\rsec{Extra Generic}
+	
+	\rtitle{Experience}
+	\rsec{Exp Generic}
+	
+	\rtitle{Skills}
+	\rsec{Skills I}
+\fi
+
+
+\end{document}
